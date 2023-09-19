@@ -6,7 +6,7 @@ path_str <- r"(C:\Users\USER\Documents\SDSU\BDA 549\Assignments\R)"
 setwd(path_str)
 
 #installing required packages
-pack = list("twitteR","tm","wordcloud","RColorBrewer","NLP","stringr","SnowballC")
+pack = list("tm","wordcloud","RColorBrewer","NLP","stringr","SnowballC","rvest")
 for(i in pack) {
   print(i)
   if (!require(i))
@@ -29,6 +29,7 @@ for (i in 1:length(pack)){
 #Creating word cloud from web page:
 
 ########################################################################################################################
+library(SnowballC)
 
 link = "https://en.wikipedia.org/wiki/Big_data"
 
